@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class NextScreen extends StatefulWidget {
-  const NextScreen({super.key});
+class DisplayScreen extends StatefulWidget {
+  const DisplayScreen({super.key});
 
   @override
-  State<NextScreen> createState() => _NextScreenState();
+  State<DisplayScreen> createState() => _DisplayScreenState();
 }
 
-class _NextScreenState extends State<NextScreen> {
+class _DisplayScreenState extends State<DisplayScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Next Screen"),
+        title: const Text("Display Screen"),
       ),
       body: Center(
         child: TextButton(
