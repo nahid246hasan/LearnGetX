@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:learn_get_x/screens/next_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -9,7 +10,8 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  var color=Colors.white;
+  var color = Colors.white;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -64,7 +66,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           title: const Text("Light Theme"),
                           onTap: () {
                             setState(() {
-                              color=Colors.white;
+                              color = Colors.white;
                             });
                             //changeTheme change our theme
                             Get.changeTheme(ThemeData.light());
@@ -75,7 +77,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           title: const Text("Dark Theme"),
                           onTap: () {
                             setState(() {
-                              color=Colors.black;
+                              color = Colors.black;
                             });
                             Get.changeTheme(ThemeData.dark());
                           },
@@ -85,6 +87,18 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                 );
               },
+            ),
+          ),
+          TextButton(
+            onPressed: () {
+              //this is the method to route another page in flutter.
+              //Navigator.push(context, MaterialPageRoute(builder: (ctx)=>NextScreen()));
+            //Now we will show it with getX
+              Get.to(const NextScreen());
+
+            },
+            child: const Text(
+              "Next Screen",
             ),
           ),
         ],
